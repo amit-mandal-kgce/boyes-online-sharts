@@ -4,6 +4,8 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { IoLogoGithub } from 'react-icons/io'
 
 const Footer = () => {
+
+    const copyrightSymbol = '&copy;';
   return (
     <footer className='mt-8' style={{ backgroundImage: `url(footer.svg)` }}>
       <div className="grid md:grid-cols-2 gap-4 p-3 text-white">
@@ -12,24 +14,24 @@ const Footer = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 space-y-5">
                 <div className="flex flex-col space-y-2">
                     <h1 className='font-bold'>Product</h1>
-                    <Link href={''}>Demo</Link>
-                    <Link href={''}>Pricing</Link>
-                    <Link href={''}>Roadmap</Link>
-                    <Link href={''}>Security FAQ</Link>
-                    <Link href={''}>Features</Link>
+                    <Link href='/'>Demo</Link>
+                    <Link href='/'>Pricing</Link>
+                    <Link href='/'>Roadmap</Link>
+                    <Link href='/'>Security FAQ</Link>
+                    <Link href='/'>Features</Link>
                 </div>
                 <div className="flex flex-col space-y-2">
                     <h1 className='font-bold'>Company</h1>
-                    <Link href={''}>About Us</Link>
-                    <Link href={''}>Careers</Link>
-                    <Link href={''}>Press</Link>
-                    <Link href={''}>Support</Link>
+                    <Link href='/'>About Us</Link>
+                    <Link href='/'>Careers</Link>
+                    <Link href='/'>Press</Link>
+                    <Link href='/'>Support</Link>
                 </div>
                 <div className="flex flex-col space-y-2">
                     <h1 className='font-bold'>Resource</h1>
-                    <Link href={''}>Installotion Manual</Link>
-                    <Link href={''}>Release Notes</Link>
-                    <Link href={''}>Community Help</Link>
+                    <Link href='/'>Installotion Manual</Link>
+                    <Link href='/'>Release Notes</Link>
+                    <Link href='/'>Community Help</Link>
                 </div>
             </div>
         </div>
@@ -46,14 +48,14 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-x-2">
                 <input type="text" placeholder='Enter your mail' className='px-2 outline-none'/>
                 <div className="">
-                    <Link href='' className='px-3 py-1 border-2 border-white rounded-md'>Suscribe</Link>
+                    <Link href='/' className='px-3 py-1 border-2 border-white rounded-md'>Suscribe</Link>
                 </div>
             </div>
         </div>
       </div>
       <h1 className="text-white text-center py-4">
-            Created by <span className="text-accent">AMIT</span> | &copy; 2023
-            All rights reserved.
+            <p dangerouslySetInnerHTML={{ __html: `Created by AMIT | ${copyrightSymbol} 2023
+            All rights reserved.` }}/> 
           </h1>
     </footer>
   )

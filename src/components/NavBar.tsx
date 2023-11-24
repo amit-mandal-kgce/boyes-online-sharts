@@ -15,7 +15,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="bg-white shadow-xl h-12 py-2 px-3 flex justify-between items-center">
+      <nav className="bg-white shadow-xl h-12 py-2 px-3 flex justify-between items-center fixed w-screen">
         <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-green-600">IndMart</div>
         <div className='hidden md:block'>
           <div className="flex space-x-4 font-semibold">
