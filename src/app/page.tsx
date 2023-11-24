@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     
-    <main className='mt-14'>
+    <main className=''>
       <p>Amit Mandal</p>
     </main>
   )

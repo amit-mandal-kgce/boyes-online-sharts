@@ -4,8 +4,6 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { IoLogoGithub } from 'react-icons/io'
 
 const Footer = () => {
-
-    const copyrightSymbol = '&copy;';
   return (
     <footer className='mt-8' style={{ backgroundImage: `url(footer.svg)` }}>
       <div className="grid md:grid-cols-2 gap-4 p-3 text-white">
@@ -54,8 +52,8 @@ const Footer = () => {
         </div>
       </div>
       <h1 className="text-white text-center py-4">
-            <p dangerouslySetInnerHTML={{ __html: `Created by AMIT | ${copyrightSymbol} 2023
-            All rights reserved.` }}/> 
+            Created by <span className="text-accent">AMIT</span> | 2023
+            All rights reserved.
           </h1>
     </footer>
   )
