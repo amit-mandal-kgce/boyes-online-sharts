@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
@@ -42,7 +43,7 @@ const Footer = () => {
                 <IoLogoGithub/>
             </div>
             <div className="font-bold">Stay Up to date with passbolt</div>
-            <div className="text-white">Elevate your style effortlessly with our curated collection of the latest trends. Discover fashion that speaks to you and technology that enhances your lifestyle. Your satisfaction is our top priority, and we're here to make every shopping experience a joyful one.</div>
+            <div className="text-white">Elevate your style effortlessly with our curated collection of the latest trends. Discover fashion that speaks to you and technology that enhances your lifestyle. Your satisfaction is our top priority, and we`&apos;`re here to make every shopping experience a joyful one.</div>
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-x-2">
                 <input type="text" placeholder='Enter your mail' className='px-2 outline-none'/>
                 <div className="">
@@ -52,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
       <h1 className="text-white text-center py-4">
-            Created by <span className="text-accent">AMIT</span> | 2023
+            Created by <span className="text-accent">AMIT</span> | &copy; 2023
             All rights reserved.
           </h1>
     </footer>
