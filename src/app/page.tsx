@@ -1,10 +1,11 @@
+import CardSections from '@/components/CardSections'
 import ImageSlider from '@/components/ImageSlider'
-import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className=''>
+    <main className='px-4'>
       <ImageSlider/>
+      <CardSections/>
     </main>
   )
 }

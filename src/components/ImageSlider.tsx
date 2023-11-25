@@ -38,7 +38,7 @@ const slideImages = [
 
 function ImageSlider() {
   return (
-    <div className=" py-4 mx-3">
+    <div className=" py-4">
       <Slide>
         {slideImages.map((slideImage, index) => (
           <div key={index}>

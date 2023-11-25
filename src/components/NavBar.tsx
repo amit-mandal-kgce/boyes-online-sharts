@@ -14,8 +14,8 @@ function NavBar() {
   }
 
   return (
-    <div>
-      <nav className="bg-white shadow-xl h-12 py-2 px-3 flex justify-between items-center fixed w-screen">
+    <div className='flex flex-col'>
+      <nav className="bg-white shadow-xl h-12 py-2 px-3 flex justify-between items-center fixed w-screen z-50">
         <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-green-600">IndMart</div>
         <div className='hidden md:block'>
           <div className="flex space-x-4 font-semibold">
@@ -35,18 +35,17 @@ function NavBar() {
         </div>
         
         <div className="hidden md:block">
-          <div className="flex space-x-4 text-xl">
+          <div className="flex space-x-4 text-xl pr-4">
           <FaRegUserCircle />
           <FaShoppingCart />
         </div>
         </div>
         
         <div className="justify-end md:hidden text-2xl pr-2" onClick={toggle}>
-          {showbox ? <RxCross2 />:<MdSegment />}
+          {showbox ? <RxCross2 className='text-red-500'/>:<MdSegment className='text-blue-300'/>}
         </div>
       </nav>
-
-      <div className="flex flex-col px-4 space-y-4 bg-white shadow-lg">
+      <div className="flex flex-col mt-12 px-6 space-y-4 bg-white shadow-lg z-50">
         {showbox &&
         (<div className="flex flex-col space-y-4 font-semibold">
           <Link onClick={toggle} href="/">Home</Link>
@@ -68,6 +67,7 @@ function NavBar() {
           <FaShoppingCart />
         </div>)}
       </div>
+
     </div>
   )
 }
