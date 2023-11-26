@@ -1,6 +1,6 @@
 import React from 'react';
-import DetailsSec from '@/components/DetailsSec';
-import { Iproduct } from '@/components/DetailsSec';
+import DetailsSec from '@/app/details/[id]/child/DetailsSec';
+import { Iproduct } from '@/app/details/[id]/child/DetailsSec';
 import data from '@/utis/productData';
 
 

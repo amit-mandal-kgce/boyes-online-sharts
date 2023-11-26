@@ -13,17 +13,17 @@ const offpric = Math.round(price - ((price/100) * offer))
   return (
     <div>
       <div className="bg-gray-100 py-3 px-10">
-        <div className="items-center flex flex-col sm:flex-row space-y-2 sm:space-x-4 text-xs md:text-base text-gray-500">
-            <Link href='/' className='cursor-pointer'>Home</Link>
+        <div className="items-center flex flex-col sm:flex-row space-y-2 sm:space-x-4 text-xs md:text-base font text-gray-500">
+            <Link href='/' className='cursor-pointer font-bold'>Home</Link>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>
-            <p className='capitalize gap-4'>{category}</p>
+            <p className='capitalize gap-4 font-bold'>{category}</p>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>
-            <p className='capitalize gap-4'>{name}</p>
+            <p className='capitalize gap-4 font-bold'>{name}</p>
         </div>
       </div>
       <div className="py-8">
         <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-8 justify-center sm:items-start">
-            <div>
+            <div className='place-items-center p-2'>
                <Image src={img} alt='Details Images' width={400} height={200}/>
             </div>
           <div>

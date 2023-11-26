@@ -7,7 +7,7 @@ const productData = [
     offer: 26,
     stars: 1,
     review: 200,
-    category: ["formal"],
+    category: ["Boyes"],
     sale: true,
     },
     {
@@ -40,7 +40,7 @@ const productData = [
     offer: 26,
     stars: 4,
     review: 200,
-    category: ["formal"],
+    category: ["Boyes"],
     sale: false,
     },
     {
@@ -49,9 +49,9 @@ const productData = [
     name: "Adventure Solid Cotton Collared Boys Shirt",
     price: 678.0,
     offer: 26,
-    stars: 4,
+    stars: 5,
     review: 200,
-    category: ["women"],
+    category: ["Boyes"],
     sale: true,
     },
 ]
