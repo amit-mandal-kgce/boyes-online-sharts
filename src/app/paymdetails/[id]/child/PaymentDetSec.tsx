@@ -5,8 +5,8 @@ import React, {useState, ChangeEvent} from 'react'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 
 
-const paymentDetSec = ({id, img, name, price, review, stars, offer, category}: Iproduct) => {
-    const [dropItems, setdropItems] = useState<number>(1);
+const PaymentDetSec = ({id, img, name, price, review, stars, offer, category}: Iproduct) => {
+    const [dropItems, setdropItems] = useState<number>(0);
     const handelQulity=(event: ChangeEvent<HTMLSelectElement>)=>{
         setdropItems(Number(event.target.value))
     }
@@ -34,7 +34,7 @@ const paymentDetSec = ({id, img, name, price, review, stars, offer, category}: I
                     <span>Qty:</span>
                     <select className='outline-none pl-2'  onChange={handelQulity}> 
                         {[1,2,3,4,5,6].map((ele)=>
-                            <option value={ele}>{ele}</option>
+                            <option key={id} value={ele}>{ele}</option>
                         )}
                     </select>
                 </ul>
@@ -101,7 +101,7 @@ const paymentDetSec = ({id, img, name, price, review, stars, offer, category}: I
   )
 }
 
-export default paymentDetSec
+export default PaymentDetSec
 
 export interface Iproduct{
     id: number;
