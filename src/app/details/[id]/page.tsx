@@ -10,8 +10,7 @@ const DynamicPage = ({ params }:{ params: { id: string } }) => {
   const product = data.find((ele: Iproduct) => ele.id.toString()===id)
   // console.log(product)
   return (
-    <div className='my-12 px-4'>
-      <div className="pt-4">
+      <div>
         {product&&(<DetailsSec
           key={product.id.toString()}
           id={product.id}
@@ -24,7 +23,6 @@ const DynamicPage = ({ params }:{ params: { id: string } }) => {
           category={product.category}
         />)}
       </div>
-    </div>
   );
 };
 

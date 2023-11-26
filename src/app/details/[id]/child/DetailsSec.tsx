@@ -8,12 +8,12 @@ import { BsCartPlus, BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
 
 
 const DetailsSec = ({id, img, name, price, review, stars, offer, category}: Iproduct) => {
-
+ 
 const offpric = Math.round(price - ((price/100) * offer))
   return (
-    <div>
+    <div className='my-4'>
       <div className="bg-gray-100 py-3 px-10">
-        <div className="items-center flex flex-col sm:flex-row space-y-2 sm:space-x-4 text-xs md:text-base font text-gray-500">
+        <div className="items-center flex flex-col font-bold sm:flex-row space-y-2 sm:space-x-4 text-xs md:text-base font text-gray-500">
             <Link href='/' className='cursor-pointer font-bold'>Home</Link>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>
             <p className='capitalize gap-4 font-bold'>{category}</p>
@@ -21,7 +21,7 @@ const offpric = Math.round(price - ((price/100) * offer))
             <p className='capitalize gap-4 font-bold'>{name}</p>
         </div>
       </div>
-      <div className="py-8">
+      <div className="py-8 px-8">
         <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-8 justify-center sm:items-start">
             <div className='place-items-center p-2'>
                <Image src={img} alt='Details Images' width={400} height={200}/>

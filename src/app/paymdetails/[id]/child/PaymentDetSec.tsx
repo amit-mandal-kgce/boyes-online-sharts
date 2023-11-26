@@ -6,7 +6,7 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 
 
 const PaymentDetSec = ({id, img, name, price, review, stars, offer, category}: Iproduct) => {
-    const [dropItems, setdropItems] = useState<number>(0);
+    const [dropItems, setdropItems] = useState<number>(1);
     const handelQulity=(event: ChangeEvent<HTMLSelectElement>)=>{
         setdropItems(Number(event.target.value))
     }
@@ -17,7 +17,6 @@ const PaymentDetSec = ({id, img, name, price, review, stars, offer, category}: I
 
   return (
     <div className='pt-1 w-full flex flex-col'>
-        <div className="text-center py-2 font-bold text-2xl text-blue-500 border-b-2 border-dotted"><span>Order Summary</span></div>
         <div className="bg-gray-100 py-3 px-10 my-4">
         <div className="items-center flex flex-col sm:flex-row space-y-2 sm:space-x-4 text-xs md:text-base text-gray-500">
             <Link href='/' className='cursor-pointer'>Home</Link>
@@ -27,6 +26,7 @@ const PaymentDetSec = ({id, img, name, price, review, stars, offer, category}: I
             <p className='capitalize gap-4'>{name}</p>
         </div>
         </div>
+        <div className="text-center py-2 font-bold text-2xl text-blue-500 border-b-2 border-dotted"><span>Order Summary</span></div>
         <div className="flex flex-col sm:flex-row justify-center my-3">
             <ul className='p-2 flex flex-col place-items-center'>
                 <Image src={img} alt="Santosh" width={250} height={200}/>
@@ -79,7 +79,7 @@ const PaymentDetSec = ({id, img, name, price, review, stars, offer, category}: I
                         </ul>
                     </div>
                     <ul className='grid grid-cols-2'>
-                        <li className='pl-4'>Total Amount</li>
+                        <li className='pl-4 font-bold'>Total Amount</li>
                         <li className='pl-4'>₹{totalPric}</li>
                     </ul>
                     <ul className='grid grid-cols-2'>
@@ -94,7 +94,7 @@ const PaymentDetSec = ({id, img, name, price, review, stars, offer, category}: I
                     <p>{totalPric}</p>
                     <p className='text-xs text-blue-600'>View Price Details</p>
                 </ul>
-                <Link href={{pathname: `/payment/${id}`}} className='p-2 px-4 text-xs md:text-base rounded-md bg-amber-400 '>Continue</Link>
+                <Link href={{pathname: `/bankingop/${id}/${dropItems}`}} className='p-2 px-4 text-xs md:text-base rounded-md bg-amber-400 '>Continue</Link>
             </div>
         </div>
     </div>

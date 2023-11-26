@@ -4,7 +4,7 @@ import data from '@/utis/productData'
 import { Iproduct } from '@/components/Card'
 
 const paymdetailspage = ({params}: {params:{id: string}}) => {
-  console.log(params)
+  // console.log(params)
   const id = params.id;
   const product = data.find((ele: Iproduct) => ele.id.toString() === id) 
   return (
