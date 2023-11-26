@@ -5,8 +5,10 @@ import { IoIosSearch } from "react-icons/io";
 import { FaRegUserCircle, FaShoppingCart  } from "react-icons/fa";
 import { MdSegment } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
+import { usePathname } from 'next/navigation';
 
 function NavBar() {
+  const pathname = usePathname();
 
   const [showbox, setShowBox] = useState(false)
   const toggle = () => {
@@ -19,11 +21,11 @@ function NavBar() {
         <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-green-600">IndMart</div>
         <div className='hidden md:block'>
           <div className="flex space-x-4 font-semibold">
-          <Link href="/">Home</Link>
-          <Link href="/men">Men</Link>
-          <Link href="/women">Women</Link>
-          <Link href="/beauty">Beauty</Link>
-          <Link href="/studio">Studio</Link>
+          <Link href="/" className={`link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
+          <Link href="/men" className={`link ${pathname === '/men' ? 'active' : ''}`}>Men</Link>
+          <Link href="/women" className={`link ${pathname === '/women' ? 'active' : ''}`}>Women</Link>
+          <Link href="/beauty" className={`link ${pathname === '/beauty' ? 'active' : ''}`}>Beauty</Link>
+          <Link href="/studio" className={`link ${pathname === '/studio' ? 'active' : ''}`}>Studio</Link>
         </div>
         </div>
         
@@ -48,11 +50,11 @@ function NavBar() {
       <div className="flex flex-col mt-12 px-6 space-y-4 bg-white shadow-lg z-50">
         {showbox &&
         (<div className="flex flex-col space-y-4 font-semibold">
-          <Link onClick={toggle} href="/">Home</Link>
-          <Link onClick={toggle} href="/men">Men</Link>
-          <Link onClick={toggle} href="/women">Women</Link>
-          <Link onClick={toggle} href="/beauty">Beauty</Link>
-          <Link onClick={toggle} href="/studio">Studio</Link>
+          <Link onClick={toggle} href="/" className={`link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
+          <Link onClick={toggle} href="/men" className={`link ${pathname === '/' ? 'active' : ''}`}>Men</Link>
+          <Link onClick={toggle} href="/women" className={`link ${pathname === '/' ? 'active' : ''}`}>Women</Link>
+          <Link onClick={toggle} href="/beauty" className={`link ${pathname === '/' ? 'active' : ''}`}>Beauty</Link>
+          <Link onClick={toggle} href="/studio" className={`link ${pathname === '/' ? 'active' : ''}`}>Studio</Link>
         </div>)}
         {showbox && (<div className="border py-1 px-3 rounded-full">
           <div className="">

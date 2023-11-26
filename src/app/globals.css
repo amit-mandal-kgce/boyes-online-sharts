@@ -2,4 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.active{
+    color: #ff00d4;
+}

@@ -2,11 +2,14 @@
 import React from 'react'
 import Image from 'next/image'
 import { AiFillStar, AiOutlineStar, AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
+import { useRouter } from 'next/navigation';
 
 const Card = ({id,img, name, price,stars, sale}: Iproduct) => {
+
+    const router = useRouter()
   return (
-    <div className="group cursor-pointer shadow-md" >
-        <div className="relative">
+    <div className="group cursor-pointer shadow-md">
+        <div className="relative" onClick={()=> router.push(`/details/${id}`)}>
             <Image className='w-full' width={800} height={1042} src={img} alt={name}/>
             {sale && <div className='bg-red-600 inline-block absolute top-0 right-0 text-[14px] text-white rounded-md px-2 py-[2px] m-4'>SALE!</div>}
             <div className="absolute top-0 left-0 w-full h-full bg-[#00000050] opacity-0 transition-opacity duration-500 group-hover:opacity-100 cursor-pointer">
