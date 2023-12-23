@@ -36,7 +36,6 @@ export default function LoginPage(){
         }
     }, [user])
 
-    console.log('data :>>', user)
     return (
     <main className="flex justify-center items-center h-screen mt-[-4px]" style={{backgroundImage: `url(login.svg)`}}>
         <div className="flex flex-col justify-center items-center">
@@ -65,7 +64,7 @@ export default function LoginPage(){
             <button onClick={onLogin} className="bg-yellow-400 text-white rounded-md mb-2 text-xs md:text-base px-4 py-1 uppercase">sign in</button>
             <div className="flex flex-row">
                 <div className="text-xs md:text-base text-white">Didn&apos;t have an account?</div>
-                <Link href="/signupon" className="text-blue-500 text-xs md:text-base underline cursor-pointer">Sign up</Link>
+                <Link href="/" className="text-blue-500 text-xs md:text-base underline cursor-pointer">Sign up</Link>
             </div>
 
         </div>

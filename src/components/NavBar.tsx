@@ -6,6 +6,9 @@ import { FaRegUserCircle, FaShoppingCart  } from "react-icons/fa";
 import { MdSegment } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { usePathname } from 'next/navigation';
+import { GoSignOut } from "react-icons/go";
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 function NavBar() {
   const pathname = usePathname();
@@ -13,6 +16,17 @@ function NavBar() {
   const [showbox, setShowBox] = useState(false)
   const toggle = () => {
     setShowBox(!showbox);
+  }
+  // logout.................
+  const router = useRouter()
+
+  const logouTheUser = async () => {
+    try {
+      await axios.get('/api/users/logout');
+      router.push('/login');
+    } catch (error: any) {
+      console.log('Cannot logout User' + error.message)
+    }
   }
 
   return (
@@ -40,6 +54,7 @@ function NavBar() {
           <div className="flex space-x-4 text-xl pr-4">
           <FaRegUserCircle />
           <FaShoppingCart />
+          <GoSignOut onClick={logouTheUser}/>
         </div>
         </div>
         
