@@ -16,12 +16,12 @@ function NavBar() {
   }
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col mt-[-4px]'>
       <nav className="bg-white shadow-xl h-12 py-2 px-3 flex justify-between items-center fixed w-screen z-50">
         <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-green-600">IndMart</div>
         <div className='hidden md:block'>
           <div className="flex space-x-4 font-semibold">
-          <Link href="/" className={`link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
+          <Link href="/profile" className={`link ${pathname === '/profile' ? 'active' : ''}`}>Home</Link>
           <Link href="/men" className={`link ${pathname === '/men' ? 'active' : ''}`}>Men</Link>
           <Link href="/women" className={`link ${pathname === '/women' ? 'active' : ''}`}>Women</Link>
           <Link href="/beauty" className={`link ${pathname === '/beauty' ? 'active' : ''}`}>Beauty</Link>
@@ -36,7 +36,7 @@ function NavBar() {
           </div>
         </div>
         
-        <div className="hidden md:block">
+        <div className="hidden md:block px-4">
           <div className="flex space-x-4 text-xl pr-4">
           <FaRegUserCircle />
           <FaShoppingCart />

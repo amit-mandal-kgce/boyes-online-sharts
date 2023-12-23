@@ -14,7 +14,7 @@ const offpric = Math.round(price - ((price/100) * offer))
     <div className='my-4'>
       <div className="bg-gray-100 py-3 px-10">
         <div className="items-center flex flex-col font-bold sm:flex-row space-y-2 sm:space-x-4 text-xs md:text-base font text-gray-500">
-            <Link href='/' className='cursor-pointer font-bold'>Home</Link>
+            <Link href='/profile' className='cursor-pointer font-bold'>Home</Link>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>
             <p className='capitalize gap-4 font-bold'>{category}</p>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>

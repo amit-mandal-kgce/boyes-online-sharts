@@ -1,3 +1,6 @@
+import Footer from "@/components/Footer"
+import NavBar from "@/components/NavBar"
+
 export default function RootLayout({
   children,
 }: {
@@ -5,8 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <section>
-        <p>Mens Sections All</p>
+      <NavBar/>
         {children}
+        <Footer/>
     </section>
   )
 }

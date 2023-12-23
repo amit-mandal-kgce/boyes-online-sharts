@@ -7,7 +7,6 @@ const BankingSecOp = ({ name, price, offer, category}: IProduct) => {
 const params: {id: string[]}=useParams()
     const [id,dropItem]= params.id;
     const dropItemsNew = Number.parseInt(dropItem);
-    console.log("Roll",dropItem)
     const itemsMulti = (dropItemsNew * price);
     const itemsDiscount = Math.round(((price / 100) * offer) * dropItemsNew)
     const totalPric = (itemsMulti - itemsDiscount)
@@ -20,7 +19,7 @@ const paymentType = ['Wallet/Postpaid', 'Credit/Debit/ATM Card', 'Net Bankink', 
     <main>
       <div className="bg-gray-100 py-3 px-10 my-4">
         <div className="items-center font-bold flex flex-col sm:flex-row space-y-2 sm:space-x-4 text-xs md:text-base text-gray-500">
-            <Link href='/' className='cursor-pointer'>Home</Link>
+            <Link href='/profile' className='cursor-pointer'>Home</Link>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>
             <p className='capitalize gap-4'>{category}</p>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>
@@ -70,7 +69,7 @@ const paymentType = ['Wallet/Postpaid', 'Credit/Debit/ATM Card', 'Net Bankink', 
                     <p className='font-bold'>{totalPric}</p>
                     <del className='text-xs text-gray-500'>{itemsDiscount}</del>
                 </ul>
-                <Link href={'/'} className='p-2 px-4 text-xs md:text-base rounded-md bg-amber-400'>Continue</Link>
+                <Link href={'/profile'} className='p-2 px-4 text-xs md:text-base rounded-md bg-amber-400'>Continue</Link>
             </div>
           </div>  
     </div>

@@ -1,11 +1,10 @@
-import CardSections from '@/components/CardSections'
-import ImageSlider from '@/components/ImageSlider'
+import SignUpPage from './signupon/page'
+
 
 export default function Home() {
   return (
-    <main className='px-4'>
-      <ImageSlider/>
-      <CardSections/>
+    <main>
+      <SignUpPage/>
     </main>
   )
 }

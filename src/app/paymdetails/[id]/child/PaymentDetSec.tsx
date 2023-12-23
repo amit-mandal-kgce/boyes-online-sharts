@@ -19,7 +19,7 @@ const PaymentDetSec = ({id, img, name, price, review, stars, offer, category}: I
     <div className='pt-1 w-full flex flex-col'>
         <div className="bg-gray-100 py-3 px-10 my-4">
         <div className="items-center flex flex-col sm:flex-row space-y-2 sm:space-x-4 text-xs md:text-base text-gray-500">
-            <Link href='/' className='cursor-pointer'>Home</Link>
+            <Link href='/profile' className='cursor-pointer'>Home</Link>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>
             <p className='capitalize gap-4'>{category}</p>
             <div className="w-full sm:w-[30px] h-[3px] bg-gray-400"/>
