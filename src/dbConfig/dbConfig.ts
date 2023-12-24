@@ -1,48 +1,20 @@
-// import mongoose from "mongoose";
-
-// export async function connectToMongoDB(){
-//   try {
-//     mongoose.connect(process.env.MONGO_URI!)
-//     const connection = mongoose.connection
-
-//     connection.on('connected', () => {
-//       console.log('connectDB')
-//     })
-
-//     connection.on('error', (err) => {
-//       console.log('cannot connectDB' + err)
-//       process.exit()
-//     })
-//   } catch (error) {
-//     console.log('erroe DB :>>' + error)
-//   }
-// }
-
 import mongoose from "mongoose";
 
-export async function connectToMongoDB() {
+export async function connectToMongoDB(){
   try {
-    if (!process.env.MONGO_URI) {
-      console.error('MONGO_URI is not defined');
-      process.exit(1); // Exit the process with an error code
-    }
-
-    // await mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-    await mongoose.connect(process.env.MONGO_URI!, { useNewUrlParser: true, useUnifiedTopology: true } as any);
-
-    
-    const connection = mongoose.connection;
+    mongoose.connect(process.env.MONGO_URI!)
+    const connection = mongoose.connection
 
     connection.on('connected', () => {
-      console.log('Connected to MongoDB');
-    });
+      console.log('connectDB')
+    })
 
     connection.on('error', (err) => {
-      console.error('Cannot connect to MongoDB: ' + err);
-      process.exit(1); // Exit the process with an error code
-    });
+      console.log('cannot connectDB' + err)
+      process.exit()
+    })
   } catch (error) {
-    console.error('Error connecting to MongoDB: ' + error);
-    process.exit(1); // Exit the process with an error code
+    console.log('erroe DB :>>' + error)
   }
 }
+
