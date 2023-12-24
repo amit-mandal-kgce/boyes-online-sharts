@@ -22,7 +22,7 @@ function NavBar() {
 
   const logouTheUser = async () => {
     try {
-      await axios.get('/api/users/logout');
+      await axios.get('api/users/logout');
       router.push('/login');
     } catch (error: any) {
       console.log('Cannot logout User' + error.message)
@@ -65,11 +65,11 @@ function NavBar() {
       <div className="flex flex-col mt-12 px-6 space-y-4 bg-white shadow-lg z-50">
         {showbox &&
         (<div className="flex flex-col space-y-4 font-semibold">
-          <Link onClick={toggle} href="/" className={`link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
-          <Link onClick={toggle} href="/men" className={`link ${pathname === '/' ? 'active' : ''}`}>Men</Link>
-          <Link onClick={toggle} href="/women" className={`link ${pathname === '/' ? 'active' : ''}`}>Women</Link>
-          <Link onClick={toggle} href="/beauty" className={`link ${pathname === '/' ? 'active' : ''}`}>Beauty</Link>
-          <Link onClick={toggle} href="/studio" className={`link ${pathname === '/' ? 'active' : ''}`}>Studio</Link>
+          <Link onClick={toggle} href="/profile" className={`link ${pathname === '/profile' ? 'active' : ''}`}>Home</Link>
+          <Link onClick={toggle} href="/men" className={`link ${pathname === '/men' ? 'active' : ''}`}>Men</Link>
+          <Link onClick={toggle} href="/women" className={`link ${pathname === '/women' ? 'active' : ''}`}>Women</Link>
+          <Link onClick={toggle} href="/beauty" className={`link ${pathname === '/beauty' ? 'active' : ''}`}>Beauty</Link>
+          <Link onClick={toggle} href="/studio" className={`link ${pathname === '/studio' ? 'active' : ''}`}>Studio</Link>
         </div>)}
         {showbox && (<div className="border py-1 px-3 rounded-full">
           <div className="">
@@ -82,6 +82,7 @@ function NavBar() {
         {showbox && (<div className="flex space-x-4 text-xl py-4" onClick={toggle}>
           <FaRegUserCircle />
           <FaShoppingCart />
+          <GoSignOut onClick={logouTheUser}/>
         </div>)}
       </div>
 
