@@ -16,7 +16,7 @@ const Footer = () => {
                     <Link href='/'>Demo</Link>
                     <Link href='/'>Pricing</Link>
                     <Link href='/'>Roadmap</Link>
-                    <Link href='/'>Security FAQ</Link>
+                    <Link href='/security'>Security FAQ</Link>
                     <Link href='/'>Features</Link>
                 </div>
                 <div className="flex flex-col space-y-2">
@@ -29,7 +29,7 @@ const Footer = () => {
                 <div className="flex flex-col space-y-2">
                     <h1 className='font-bold'>Resource</h1>
                     <Link href='/'>Installotion Manual</Link>
-                    <Link href='/'>Release Notes</Link>
+                    <Link href='/release'>Release Notes</Link>
                     <Link href='/'>Community Help</Link>
                 </div>
             </div>
