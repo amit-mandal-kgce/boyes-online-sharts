@@ -5,12 +5,10 @@ const productSchema = new Schema({
   image: {
     type: String,
     require: true,
-    unique: true,
   },
   name: {
     type: String,
     require: true,
-    unique: true,
   },
   price: {
     type: Number,

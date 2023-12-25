@@ -2,6 +2,30 @@ import { connectToMongoDB } from "@/dbConfig/dbConfig";
 import Product from '@/modulesproducts/productModel'
 import { NextRequest, NextResponse } from "next/server";
 
+
+// export default async function handler(req: any, res: any){
+//     if(req.method !== "POST"){
+//         res.status(405).send({msg:'Only post request are allowed'});
+//         return;
+//     }
+//     const {image, name, price, offer, stars, review, category, sale} = req.body;
+//     try {
+//         await connectToMongoDB();
+//         Product.create({image, name, price, offer, stars, review, category, sale}).then((data) => {
+//             console.log(data)
+//             res.status(201).send(data)
+//         })
+//     } catch (error) {
+//         console.log(error);
+//         res.status(400).send({error, msg: "Somthing want Wrongs!"})
+        
+//     }
+// }
+
+
+
+
+
 connectToMongoDB();
 
 
@@ -12,15 +36,7 @@ export async function POST(request: NextRequest) {
         console.log(reqBody);
         const semProduct = await Product.find({image, name, price, offer, stars, review, category, sale})
 
-        if(semProduct == semProduct){ 
-            const semNewProduct = new Product({image, name, price, offer, stars, review, category, sale})
-            const saveSemNewProduct = await semNewProduct.save();
-            return NextResponse.json({
-            message: 'Product Creadited!',
-            success: true,
-            saveSemNewProduct,
-            })
-        }else{
+        if(semProduct){ 
             const newProduct = new Product({image, name, price, offer, stars, review, category, sale})
             const savedProduct = await newProduct.save();
             return NextResponse.json({
@@ -28,6 +44,15 @@ export async function POST(request: NextRequest) {
                 success: true,
                 savedProduct,
             })
+        }else{
+            const semNewProduct = new Product({image, name, price, offer, stars, review, category, sale})
+            const saveSemNewProduct = await semNewProduct.save();
+            return NextResponse.json({
+            message: 'Product Creadited!',
+            success: true,
+            saveSemNewProduct,
+            })
+            
         }
         
     } catch (error: any) {
