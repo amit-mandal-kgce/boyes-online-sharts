@@ -3,7 +3,7 @@ import React from 'react'
 import { IoMdHome } from 'react-icons/io';
 import Link from 'next/link';
 async function getData () {
-    const res = await fetch('http://localhost:3000/api/products/productget', {cache: 'no-store'});
+    const res = await fetch('/api/products/productget', {cache: 'no-store'});
     if(!res.ok) return notFound();
     return res.json();
 }
