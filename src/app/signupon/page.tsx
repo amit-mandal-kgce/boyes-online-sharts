@@ -21,7 +21,7 @@ export default function SignUpPage(){
     const onSignUp = async () => {
         try {
             setLoding(true)
-            const response = await axios.post('/api/users/signup/productget', user);
+            const response = await axios.post('/api/users/signup', user);
             console.log('Signup Okey', response.data)
             router.push('/login')
         } catch (error: any) {
